@@ -252,6 +252,239 @@ header{
   transition:.2s;
 }
 .wa-btn:hover{background:#1FB959}
+/* IA */
+.ai-card{border:1px solid #0E4D9240;background:linear-gradient(180deg,#FFFFFF, #F3F8FF)}
+.ai-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.ai-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--blue);
+}
+.ai-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+/* histórico semanal */
+.hist{display:flex;gap:6px;align-items:flex-end;height:74px;margin:4px 0 4px}
+.hist .col{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.hist .bar{width:100%;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,var(--blue),#2E7FD0);min-height:4px;transition:height .6s}
+.hist .col.today .bar{background:linear-gradient(180deg,var(--red),#F0655C)}
+.hist .col span{font-size:9.5px;color:var(--gray);font-weight:600}
+.hist-legend{font-size:10.5px;color:var(--gray);margin-bottom:12px}
+.hist-legend b{color:var(--blue-dark)}
+/* insights */
+.ai-btn{
+  width:100%;padding:12px;border-radius:14px;border:none;cursor:pointer;
+  background:var(--blue);color:#fff;
+  font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;
+  transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.ai-btn:hover{background:var(--blue-dark)}
+.ai-btn:disabled{opacity:.55;cursor:default}
+.insights{margin-top:12px;display:none}
+.insights.show{display:block}
+.insight{
+  background:#fff;border:1px solid var(--line);border-left:3px solid var(--blue);
+  border-radius:12px;padding:11px 13px;margin-bottom:8px;
+  font-size:12.5px;line-height:1.55;color:var(--ink);
+}
+.insight.action{border-left-color:var(--red)}
+.apply-sched{
+  margin-top:4px;width:100%;padding:11px;border-radius:12px;cursor:pointer;
+  border:1px solid var(--blue);background:#fff;color:var(--blue);
+  font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:700;transition:.2s;
+}
+.apply-sched:hover{background:var(--blue-soft)}
+/* chat IA */
+.ai-chat{display:flex;gap:8px;margin-top:12px}
+.ai-chat input{
+  flex:1;padding:11px 13px;border:1px solid var(--line);border-radius:12px;
+  background:#fff;font-family:'Inter';font-size:13px;color:var(--ink);
+}
+.ai-chat input::placeholder{color:var(--off)}
+.ai-chat button{
+  padding:0 16px;border-radius:12px;border:none;background:var(--blue);color:#fff;
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;cursor:pointer;
+}
+.ai-answer{
+  display:none;margin-top:10px;background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:12px 13px;font-size:12.5px;line-height:1.6;color:var(--ink);
+}
+.ai-answer.show{display:block}
+.spin{
+  width:15px;height:15px;border:2px solid #ffffff66;border-top-color:#fff;border-radius:50%;
+  animation:rot .7s linear infinite;display:inline-block;
+}
+@keyframes rot{to{transform:rotate(360deg)}}
+/* ---------- home: resumo ---------- */
+.summary{
+  display:flex;gap:10px;margin-top:16px;
+}
+.sum-box{
+  flex:1;background:#ffffff14;border:1px solid #ffffff22;border-radius:14px;
+  padding:10px 12px;backdrop-filter:blur(4px);
+}
+.sum-box b{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;display:block;color:#fff}
+.sum-box span{font-size:10px;color:#BFD3EA;font-weight:500}
+/* ações rápidas */
+.quick{display:flex;gap:10px;margin:16px 0 4px}
+.quick button{
+  flex:1;padding:11px 0;border-radius:14px;cursor:pointer;
+  font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
+  border:1px solid var(--line);background:var(--card);color:var(--blue);
+  box-shadow:var(--shadow);transition:.2s;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.quick button:hover{border-color:var(--blue)}
+.quick button.danger{color:var(--red)}
+.quick button.danger:hover{border-color:var(--red)}
+/* alertas na home */
+.home-alert{
+  display:flex;align-items:flex-start;gap:10px;
+  background:#FFF7EA;border:1px solid #E88A1A55;border-radius:14px;
+  padding:11px 13px;margin-bottom:10px;
+  font-size:12px;color:#9A5B0B;font-weight:500;line-height:1.5;
+}
+.home-alert.red{background:var(--red-soft);border-color:#E6332955;color:#C0271E}
+/* card: status extra */
+.card-status{
+  display:flex;gap:8px;margin-top:12px;padding-top:11px;
+  border-top:1px dashed var(--line);flex-wrap:wrap;
+}
+.tag{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:10.5px;font-weight:600;color:var(--gray);
+  background:#F5F8FC;border:1px solid var(--line);
+  padding:4px 9px;border-radius:99px;
+}
+.tag.blue{color:var(--blue);border-color:#0E4D9244;background:var(--blue-soft)}
+.tag.ai{color:#7A3FA8;border-color:#7A3FA844;background:#7A3FA812}
+.speed-dots{display:inline-flex;gap:2.5px;align-items:center}
+.speed-dots i{width:4px;border-radius:2px;background:#C9D6E6}
+.speed-dots i.on{background:var(--blue)}
+.speed-dots i:nth-child(1){height:6px}
+.speed-dots i:nth-child(2){height:9px}
+.speed-dots i:nth-child(3){height:12px}
+.speed-dots i:nth-child(4){height:15px}
+/* ---------- setores ---------- */
+.sectors{display:flex;gap:7px;margin:14px 0 2px;overflow-x:auto;padding-bottom:2px}
+.sectors button{
+  padding:8px 14px;border-radius:99px;border:1px solid var(--line);
+  background:var(--card);color:var(--gray);white-space:nowrap;
+  font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:600;cursor:pointer;transition:.15s;
+}
+.sectors button.sel{background:var(--blue);border-color:var(--blue);color:#fff}
+/* cenas */
+.scenes{display:flex;gap:8px;margin-top:12px}
+.scenes button{
+  flex:1;padding:10px 6px;border-radius:14px;border:1px solid var(--line);
+  background:var(--card);cursor:pointer;box-shadow:var(--shadow);transition:.2s;
+  font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:700;color:var(--blue-dark);
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+}
+.scenes button span{font-size:17px}
+.scenes button:hover{border-color:var(--blue)}
+/* previsão do tempo */
+.weather{
+  background:linear-gradient(120deg,#0E4D92,#1668BE);color:#fff;
+  border-radius:var(--r);padding:14px 16px;margin-top:12px;box-shadow:var(--shadow);
+}
+.weather-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.weather-top h4{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#BFD3EA}
+.weather-days{display:flex;gap:8px}
+.wd{flex:1;background:#ffffff14;border-radius:12px;padding:9px 6px;text-align:center}
+.wd span{font-size:10px;color:#BFD3EA;font-weight:600;display:block}
+.wd em{font-style:normal;font-size:17px;display:block;margin:3px 0}
+.wd b{font-family:'Poppins',sans-serif;font-size:14px}
+.weather-tip{
+  margin-top:10px;font-size:11.5px;line-height:1.5;color:#EAF4F7;
+  background:#ffffff12;border-radius:10px;padding:9px 11px;font-weight:500;
+}
+/* ferramentas (loja, relatório, QR) */
+.tools{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+.tools button{
+  padding:12px 6px;border-radius:14px;border:1px solid var(--line);cursor:pointer;
+  background:var(--card);box-shadow:var(--shadow);transition:.2s;
+  font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:700;color:var(--blue-dark);
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+}
+.tools button span{font-size:18px}
+.tools button:hover{border-color:var(--blue)}
+/* perfil */
+.profile-btn{
+  margin-top:10px;align-self:flex-start;
+  background:#ffffff18;border:1px solid #ffffff30;color:#fff;
+  padding:6px 12px;border-radius:99px;cursor:pointer;
+  font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.04em;
+}
+/* gráfico 24h */
+.chart-wrap{position:relative}
+.chart-wrap svg{width:100%;height:130px;display:block}
+.chart-legend{display:flex;gap:14px;margin-top:8px;font-size:10.5px;color:var(--gray);font-weight:600}
+.chart-legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+/* modal */
+.modal-bg{
+  display:none;position:absolute;inset:0;background:#0A356899;z-index:50;
+  align-items:flex-end;justify-content:center;backdrop-filter:blur(2px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:430px;background:var(--bg);border-radius:24px 24px 0 0;
+  padding:20px 22px 30px;max-height:82%;overflow-y:auto;
+  animation:up .25s ease;
+}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.modal h3{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:var(--blue-dark)}
+.modal .close{
+  float:right;border:none;background:#E4EAF2;color:var(--gray);width:30px;height:30px;
+  border-radius:50%;cursor:pointer;font-size:14px;font-weight:700;
+}
+.prod{
+  display:flex;gap:12px;align-items:center;background:var(--card);
+  border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:10px;box-shadow:var(--shadow);
+}
+.prod .pic{width:46px;height:46px;border-radius:12px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0}
+.prod .inf{flex:1}
+.prod .inf b{font-family:'Poppins',sans-serif;font-size:13px;color:var(--blue-dark);display:block}
+.prod .inf span{font-size:11px;color:var(--gray)}
+.prod .inf em{font-style:normal;font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--blue);display:block;margin-top:2px}
+.prod button{
+  border:none;background:#25D366;color:#fff;padding:9px 13px;border-radius:11px;cursor:pointer;
+  font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;
+}
+/* QR scan */
+.qr-box{
+  margin:16px auto;width:190px;height:190px;border-radius:18px;background:#0A1522;
+  position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+}
+.qr-box::before{
+  content:"";position:absolute;inset:22px;border:2px dashed #5FD4E877;border-radius:12px;
+}
+.qr-line{
+  position:absolute;left:24px;right:24px;height:2px;background:var(--red);
+  box-shadow:0 0 12px var(--red);animation:scan 1.6s ease-in-out infinite;
+}
+@keyframes scan{0%,100%{top:26px}50%{top:160px}}
+.qr-box span{font-size:44px;opacity:.85}
+/* toast */
+.toast{
+  position:absolute;left:18px;right:18px;bottom:20px;z-index:60;
+  background:var(--blue-dark);color:#fff;border-radius:14px;padding:13px 15px;
+  font-size:12.5px;font-weight:500;line-height:1.5;box-shadow:0 8px 24px rgba(10,53,104,.4);
+  transform:translateY(120%);opacity:0;transition:.35s;pointer-events:none;
+}
+.toast.show{transform:translateY(0);opacity:1}
+/* relatório impresso */
+#report{display:none}
+@media print{
+  body>.phone,.modal-bg,.toast{display:none !important}
+  #report{display:block;font-family:'Inter',sans-serif;color:#152435;padding:10px}
+  #report h1{font-family:'Poppins',sans-serif;color:#0E4D92;font-size:22px;margin-bottom:2px}
+  #report .sub{color:#67788C;font-size:12px;margin-bottom:18px}
+  #report table{width:100%;border-collapse:collapse;margin-top:10px}
+  #report th,#report td{border:1px solid #DCE4EE;padding:8px 10px;font-size:12px;text-align:left}
+  #report th{background:#F2F5F9;font-weight:600}
+  #report .big{font-size:16px;font-weight:700;color:#0E4D92}
+  #report .foot{margin-top:24px;font-size:10.5px;color:#67788C}
+}
 /* footer */
 .proto-tag{
   text-align:center;padding:10px 0 18px;font-size:10px;color:#9AA8B8;
@@ -264,24 +497,58 @@ header{
 
   <!-- ================= HOME ================= -->
   <div class="home" id="home">
-    <header>
-      <div class="brand">
-        <div class="brand-mark">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2v20M12 12l7-4M12 12l-7-4M12 12l7 4M12 12l-7 4M12 2l3 3M12 2L9 5M12 22l3-3M12 22l-3-3" stroke="#0E4D92" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
+    <header style="flex-direction:column;align-items:stretch">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div class="brand">
+          <div class="brand-mark">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v20M12 12l7-4M12 12l-7-4M12 12l7 4M12 12l-7 4M12 2l3 3M12 2L9 5M12 22l3-3M12 22l-3-3" stroke="#0E4D92" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h1>Refri<span>Forte</span></h1>
+            <small>Clima · Controle Remoto</small>
+          </div>
         </div>
-        <div>
-          <h1>Refri<span>Forte</span></h1>
-          <small>Clima · Controle Remoto</small>
-        </div>
+        <div class="env">Ambiente externo<br><b id="ext-temp">31°C</b></div>
       </div>
-      <div class="env">Ambiente externo<br><b id="ext-temp">31°C</b></div>
+      <div class="summary">
+        <div class="sum-box"><b id="sum-on">--</b><span>Equipamentos ligados</span></div>
+        <div class="sum-box"><b id="sum-kwh">--</b><span>Consumo hoje</span></div>
+        <div class="sum-box"><b id="sum-cost">--</b><span>Custo hoje</span></div>
+      </div>
+      <button class="profile-btn" id="profile-btn" onclick="toggleProfile()">👤 Perfil: Gestor ▾</button>
     </header>
 
     <div class="screen">
+      <div class="quick">
+        <button onclick="allPower(true)">⏻ Ligar todos</button>
+        <button class="danger" onclick="allPower(false)">⏻ Desligar todos</button>
+      </div>
+
+      <div class="scenes">
+        <button onclick="scene('chegada')"><span>🌅</span>Chegada da equipe</button>
+        <button onclick="scene('verao')"><span>🔥</span>Modo verão</button>
+        <button onclick="scene('fim')"><span>🌙</span>Fim de expediente</button>
+      </div>
+
+      <div class="weather">
+        <div class="weather-top"><h4>Previsão · Palhoça/SC</h4><span style="font-size:10.5px;color:#BFD3EA">via RefriForte IA</span></div>
+        <div class="weather-days" id="weather-days"></div>
+        <div class="weather-tip" id="weather-tip"></div>
+      </div>
+
+      <div id="home-alerts" style="margin-top:14px"></div>
+      <div class="sectors" id="sectors"></div>
       <div class="section-label">Meus equipamentos</div>
       <div id="device-list"></div>
+
+      <div class="tools">
+        <button onclick="openModal('store')"><span>🛒</span>Loja de peças</button>
+        <button onclick="printReport()"><span>📄</span>Relatório mensal</button>
+        <button onclick="openModal('qr')"><span>➕</span>Adicionar (QR)</button>
+      </div>
+
       <div class="proto-tag">Protótipo de demonstração · dados simulados</div>
     </div>
   </div>
@@ -359,31 +626,203 @@ header{
             <span>Nível atual</span>
             <b id="water-pct">--%</b>
           </div>
+          <div id="water-pred" style="margin-top:8px;font-size:11.5px;color:var(--blue);font-weight:600"></div>
+        </div>
+
+        <div class="ctrl full">
+          <h4>Últimas 24 horas · temperatura e umidade</h4>
+          <div class="chart-wrap" id="chart24"></div>
+          <div class="chart-legend">
+            <span><i style="background:#E63329"></i>Externa</span>
+            <span><i style="background:#0E4D92"></i>Ambiente</span>
+            <span><i style="background:#5FB3D0"></i>Umidade %</span>
+          </div>
+        </div>
+        <div class="ctrl full">
+          <div class="sched-head">
+            <h4 style="margin-bottom:0">Programação semanal</h4>
+            <div class="sw" id="sw-sched" onclick="toggleSched()"></div>
+          </div>
+          <div class="sched-body" id="sched-body">
+            <div class="days" id="days-seg">
+              <button onclick="toggleDay(0)">S</button>
+              <button onclick="toggleDay(1)">T</button>
+              <button onclick="toggleDay(2)">Q</button>
+              <button onclick="toggleDay(3)">Q</button>
+              <button onclick="toggleDay(4)">S</button>
+              <button onclick="toggleDay(5)">S</button>
+              <button onclick="toggleDay(6)">D</button>
+            </div>
+            <div class="sched-times">
+              <label>Ligar às
+                <input type="time" id="sched-on" onchange="setSchedTime('on',this.value)">
+              </label>
+              <label>Desligar às
+                <input type="time" id="sched-off" onchange="setSchedTime('off',this.value)">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="ctrl full">
+          <h4>Consumo de energia · hoje</h4>
+          <div class="energy-grid">
+            <div class="energy-box"><b id="en-kwh">--</b><span>kWh consumidos</span></div>
+            <div class="energy-box"><b id="en-cost">--</b><span>Custo estimado</span></div>
+            <div class="energy-box"><b id="en-hours">--</b><span>Horas de uso</span></div>
+          </div>
+          <div class="energy-save" id="en-save">🌿 Economia vs. ar-condicionado equivalente: <b>--</b> hoje</div>
+        </div>
+
+        <div class="ctrl full ai-card">
+          <div class="ai-head">
+            <div class="ai-badge"><span class="dot"></span> RefriForte IA</div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:11px;color:var(--gray);font-weight:600">Modo Inteligente</span>
+              <div class="sw" id="sw-ai" onclick="toggleAI()"></div>
+            </div>
+          </div>
+
+          <h4>Histórico de uso · últimos 7 dias</h4>
+          <div class="hist" id="hist"></div>
+          <div class="hist-legend">Total na semana: <b id="hist-total">--</b> de uso · <b id="hist-kwh">--</b></div>
+
+          <button class="ai-btn" id="ai-btn" onclick="aiAnalyze()">✦ Gerar recomendações da IA</button>
+          <div class="insights" id="insights"></div>
+
+          <div class="ai-chat">
+            <input id="ai-q" placeholder="Pergunte à IA (ex.: como economizar mais?)" onkeydown="if(event.key==='Enter')aiAsk()">
+            <button onclick="aiAsk()">➤</button>
+          </div>
+          <div class="ai-answer" id="ai-answer"></div>
+        </div>
+
+        <div class="ctrl full">
+          <h4>Manutenção e assistência</h4>
+          <div class="maint-row"><span>Limpeza do painel evaporativo</span><b id="maint-left">--</b></div>
+          <div class="maint-bar"><div class="maint-fill" id="maint-fill"></div></div>
+          <button class="wa-btn" onclick="openWhats()">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M12 2A10 10 0 0 0 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.27-1.24A9.96 9.96 0 0 0 12 22a10 10 0 1 0 0-20zm5.07 14.12c-.22.61-1.27 1.16-1.76 1.2-.47.05-.91.22-3.06-.64-2.59-1.02-4.25-3.66-4.38-3.83-.13-.17-1.05-1.4-1.05-2.67 0-1.27.66-1.9.9-2.16.22-.25.5-.31.66-.31l.48.01c.15.01.36-.06.56.43l.78 1.9c.07.14.11.31.02.49l-.31.47-.44.48c-.14.14-.29.29-.13.57.17.28.74 1.22 1.59 1.98 1.09.97 2 1.27 2.29 1.41.28.14.45.12.61-.07l.94-1.09c.2-.26.38-.2.63-.11l2.02.95c.29.15.49.22.56.34.07.12.07.71-.15 1.32z"/></svg>
+            Solicitar assistência RefriForte
+          </button>
         </div>
       </div>
 
       <div class="alert" id="alert-water">⚠️ Nível de água baixo. Reabasteça o reservatório para manter a umidificação ativa.</div>
     </div>
   </div>
+
+  <!-- ================= MODAIS ================= -->
+  <div class="modal-bg" id="modal-store" onclick="if(event.target===this)closeModals()">
+    <div class="modal">
+      <button class="close" onclick="closeModals()">✕</button>
+      <h3>🛒 Loja de peças e consumíveis</h3>
+      <p style="font-size:12px;color:var(--gray);margin-top:4px">Peças originais RefriForte com entrega para todo o Brasil.</p>
+      <div class="prod"><div class="pic">🧊</div><div class="inf"><b>Painel evaporativo</b><span>Compatível com linha CLI</span><em>R$ 289,90</em></div><button onclick="buyItem('Painel evaporativo')">Comprar</button></div>
+      <div class="prod"><div class="pic">💧</div><div class="inf"><b>Boia de nível</b><span>Reposição original</span><em>R$ 49,90</em></div><button onclick="buyItem('Boia de nível')">Comprar</button></div>
+      <div class="prod"><div class="pic">🌀</div><div class="inf"><b>Kit filtros de ar</b><span>2 unidades · lavável</span><em>R$ 119,90</em></div><button onclick="buyItem('Kit filtros de ar')">Comprar</button></div>
+      <div class="prod"><div class="pic">⚙️</div><div class="inf"><b>Bomba d'água 220V</b><span>Linha CLI-45 / CLI-70</span><em>R$ 199,90</em></div><button onclick="buyItem('Bomba d\'água 220V')">Comprar</button></div>
+    </div>
+  </div>
+
+  <div class="modal-bg" id="modal-qr" onclick="if(event.target===this)closeModals()">
+    <div class="modal" style="text-align:center">
+      <button class="close" onclick="closeModals()">✕</button>
+      <h3>➕ Adicionar equipamento</h3>
+      <p style="font-size:12px;color:var(--gray);margin-top:4px">Aponte a câmera para o QR code na etiqueta do equipamento.<br>A garantia é ativada automaticamente.</p>
+      <div class="qr-box"><div class="qr-line"></div><span>▣</span></div>
+      <button class="ai-btn" onclick="simulateScan()" id="qr-btn">Simular leitura do QR code</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- relatório para impressão/PDF -->
+  <div id="report"></div>
 </div>
 
 <script>
 /* =============== estado simulado =============== */
 const devices = [
-  { id:'cli70',  name:'Climatizador CLI-70 PRO', loc:'Galpão de Produção · 70.000 m³/h',
-    on:true,  temp:26.4, hum:58, speed:3, pump:true,  swing:true,  water:72, timer:0 },
-  { id:'cli45',  name:'Climatizador CLI-45',      loc:'Showroom · 45.000 m³/h',
-    on:false, temp:30.8, hum:41, speed:1, pump:false, swing:false, water:34, timer:0 },
-  { id:'ex1200', name:'Exaustor EX-1200',          loc:'Cozinha Industrial · Ø 1,20 m',
-    on:true,  temp:29.1, hum:47, speed:2, pump:null, swing:null,  water:null, timer:2 },
+  { id:'cli70',  name:'Climatizador CLI-70 PRO', loc:'Galpão de Produção · 70.000 m³/h', sector:'Galpão',
+    on:true,  temp:26.4, hum:58, speed:3, pump:true,  swing:true,  water:72, timer:0,
+    kw:[0.45,0.65,0.9,1.2], energy:6.8, hoursToday:7.5, hoursUse:164, maintLimit:200,
+    aiMode:false,
+    hist:[{d:'Seg',h:9.5},{d:'Ter',h:10.2},{d:'Qua',h:9.8},{d:'Qui',h:11.4},{d:'Sex',h:8.9},{d:'Sáb',h:0},{d:'Hoje',h:7.5}],
+    sched:{enabled:true, days:[1,1,1,1,1,0,0], on:'07:00', off:'18:00'} },
+  { id:'cli45',  name:'Climatizador CLI-45',      loc:'Showroom · 45.000 m³/h', sector:'Showroom',
+    on:false, temp:30.8, hum:41, speed:1, pump:false, swing:false, water:34, timer:0,
+    kw:[0.3,0.45,0.6,0.85], energy:1.2, hoursToday:2.1, hoursUse:48, maintLimit:200,
+    aiMode:false,
+    hist:[{d:'Seg',h:3.2},{d:'Ter',h:4.1},{d:'Qua',h:2.8},{d:'Qui',h:5.5},{d:'Sex',h:3.9},{d:'Sáb',h:4.6},{d:'Hoje',h:2.1}],
+    sched:{enabled:false, days:[1,1,1,1,1,1,0], on:'08:00', off:'17:00'} },
+  { id:'ex1200', name:'Exaustor EX-1200',          loc:'Cozinha Industrial · Ø 1,20 m', sector:'Cozinha',
+    on:true,  temp:29.1, hum:47, speed:2, pump:null, swing:null,  water:null, timer:2,
+    kw:[0.4,0.6,0.85,1.1], energy:4.1, hoursToday:5.8, hoursUse:96, maintLimit:300,
+    aiMode:false,
+    hist:[{d:'Seg',h:8.1},{d:'Ter',h:8.4},{d:'Qua',h:7.9},{d:'Qui',h:8.6},{d:'Sex',h:9.2},{d:'Sáb',h:10.5},{d:'Hoje',h:5.8}],
+    sched:{enabled:false, days:[1,1,1,1,1,1,1], on:'10:00', off:'22:00'} },
 ];
 let current = null;
-const EXT = 31; // temp externa
+let profile = 'gestor';        // gestor vê tudo; operador só o Galpão
+let sectorFilter = 'Todos';
+const EXT = 31;          // temp externa
+const TARIFA = 0.95;     // R$/kWh
+const FATOR_AC = 7;      // consumo equivalente de ar-condicionado
+const WHATS_REFRIFORTE = '5548999999999'; // substituir pelo número oficial
+const FORECAST = [
+  {d:'Hoje',   icon:'☀️', max:31, min:22},
+  {d:'Amanhã', icon:'🌤️', max:34, min:23},
+  {d:'Sábado', icon:'🌧️', max:27, min:20},
+];
 
 /* =============== home =============== */
+function visibleDevices(){
+  let list = profile==='operador' ? devices.filter(d=>d.sector==='Galpão') : devices;
+  if(sectorFilter!=='Todos') list = list.filter(d=>d.sector===sectorFilter);
+  return list;
+}
+
 function renderHome(){
+  const vis = profile==='operador' ? devices.filter(d=>d.sector==='Galpão') : devices;
+
+  // resumo do topo
+  const ligados = vis.filter(d=>d.on).length;
+  const kwhTotal = vis.reduce((a,d)=>a+d.energy,0);
+  document.getElementById('sum-on').textContent = `${ligados} de ${vis.length}`;
+  document.getElementById('sum-kwh').textContent = kwhTotal.toFixed(1) + ' kWh';
+  document.getElementById('sum-cost').textContent = 'R$ ' + (kwhTotal*TARIFA).toFixed(2).replace('.',',');
+
+  // previsão do tempo + dica da IA
+  document.getElementById('weather-days').innerHTML = FORECAST.map(f=>
+    `<div class="wd"><span>${f.d}</span><em>${f.icon}</em><b>${f.max}°</b><span>${f.min}° min</span></div>`).join('');
+  const amanha = FORECAST[1];
+  document.getElementById('weather-tip').innerHTML = amanha.max>=33
+    ? `✦ <b>Dica da IA:</b> amanhã fará ${amanha.max}°C. Sugiro antecipar o acionamento do Galpão para 6h30 e verificar o nível de água hoje.`
+    : `✦ <b>Dica da IA:</b> temperaturas amenas nos próximos dias — o modo econômico (velocidade 1–2) deve ser suficiente.`;
+
+  // abas de setores
+  const sectors = ['Todos', ...new Set(vis.map(d=>d.sector))];
+  document.getElementById('sectors').innerHTML = sectors.map(s=>
+    `<button class="${sectorFilter===s?'sel':''}" onclick="setSector('${s}')">${s==='Todos'?'Todos os setores':s}</button>`).join('');
+
+  // alertas
+  const alerts = [];
+  vis.forEach(d=>{
+    if(d.water !== null && d.water < 20)
+      alerts.push({red:true, txt:`<b>${d.name}</b>: nível de água crítico (${d.water.toFixed(0)}%). Reabasteça o reservatório.`});
+    else if(d.water !== null && d.water < 40)
+      alerts.push({red:false, txt:`<b>${d.name}</b>: reservatório em ${d.water.toFixed(0)}%. Programe o reabastecimento.`});
+    if(d.hoursUse / d.maintLimit >= 0.8)
+      alerts.push({red:false, txt:`<b>${d.name}</b>: limpeza do painel evaporativo em ${Math.max(0,Math.round(d.maintLimit-d.hoursUse))} h de uso.`});
+  });
+  document.getElementById('home-alerts').innerHTML = alerts.map(a=>
+    `<div class="home-alert ${a.red?'red':''}">${a.red?'🚨':'⚠️'} <span>${a.txt}</span></div>`).join('');
+
+  // cartões
+  const speedNames = ['1','2','3','Turbo'];
   const list = document.getElementById('device-list');
-  list.innerHTML = devices.map(d => `
+  list.innerHTML = visibleDevices().map(d => `
     <div class="card ${d.on?'on':''}" onclick="openDevice('${d.id}')">
       <div class="card-top">
         <div>
@@ -396,8 +835,137 @@ function renderHome(){
         <div class="metric"><b>${d.temp.toFixed(1)}<sup>°C</sup></b><span>Temperatura</span></div>
         <div class="metric"><b>${d.hum.toFixed(0)}<sup>%</sup></b><span>Umidade</span></div>
         ${d.water!==null ? `<div class="metric ${d.water<20?'warn':''}"><b>${d.water.toFixed(0)}<sup>%</sup></b><span>Água</span></div>` : ''}
+        <div class="metric"><b>${d.energy.toFixed(1)}<sup>kWh</sup></b><span>Hoje</span></div>
+      </div>
+      <div class="card-status">
+        ${d.on ? `<span class="tag blue"><span class="speed-dots">
+          <i class="${d.speed>=1?'on':''}"></i><i class="${d.speed>=2?'on':''}"></i><i class="${d.speed>=3?'on':''}"></i><i class="${d.speed>=4?'on':''}"></i>
+        </span> Vel. ${speedNames[d.speed-1]}</span>` : ''}
+        ${d.on && d.pump ? `<span class="tag blue">💧 Umidificando</span>` : ''}
+        ${d.aiMode ? `<span class="tag ai">✦ Modo IA</span>` : ''}
+        ${d.sched.enabled ? `<span class="tag">🕐 ${d.sched.on}–${d.sched.off}</span>` : ''}
+        ${d.on && d.timer ? `<span class="tag">⏲ Timer ${d.timer}h</span>` : ''}
+        ${!d.on && !d.sched.enabled ? `<span class="tag">Toque para controlar</span>` : ''}
       </div>
     </div>`).join('');
+}
+
+function allPower(state){
+  visibleDevices().forEach(d=>{ d.on = state; if(!state) d.timer = 0; });
+  renderHome(); saveState();
+}
+
+/* =============== cenas =============== */
+function scene(s){
+  const vis = visibleDevices();
+  if(s==='fim'){
+    vis.forEach(d=>{ d.on=false; d.timer=0; });
+    showToast('🌙 Cena "Fim de expediente": todos os equipamentos desligados.');
+  }
+  if(s==='verao'){
+    vis.forEach(d=>{ d.on=true; d.speed=4; if(d.pump!==null && d.water>5) d.pump=true; });
+    showToast('🔥 Cena "Modo verão": tudo ligado no turbo com umidificação máxima.');
+  }
+  if(s==='chegada'){
+    vis.forEach(d=>{ d.on=true; d.speed=2; if(d.pump!==null && d.water>5) d.pump=true; });
+    showToast('🌅 Cena "Chegada da equipe": ambientes sendo climatizados na velocidade 2.');
+  }
+  renderHome(); saveState();
+}
+
+/* =============== setores e perfil =============== */
+function setSector(s){ sectorFilter = s; renderHome(); }
+function toggleProfile(){
+  profile = profile==='gestor' ? 'operador' : 'gestor';
+  sectorFilter = 'Todos';
+  document.getElementById('profile-btn').textContent =
+    profile==='gestor' ? '👤 Perfil: Gestor ▾' : '👷 Perfil: Operador (Galpão) ▾';
+  showToast(profile==='gestor'
+    ? '👤 Perfil Gestor: acesso a todos os setores e equipamentos.'
+    : '👷 Perfil Operador: acesso restrito aos equipamentos do Galpão.');
+  renderHome();
+}
+
+/* =============== modais, loja e QR =============== */
+function openModal(m){ document.getElementById('modal-'+m).classList.add('show'); }
+function closeModals(){ document.querySelectorAll('.modal-bg').forEach(m=>m.classList.remove('show')); }
+function buyItem(item){
+  const msg = encodeURIComponent(`Olá, RefriForte! Quero comprar pelo app: ${item}.`);
+  window.open(`https://wa.me/${WHATS_REFRIFORTE}?text=${msg}`,'_blank');
+}
+function simulateScan(){
+  const btn = document.getElementById('qr-btn');
+  btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Lendo QR code...';
+  setTimeout(()=>{
+    btn.disabled = false; btn.textContent = 'Simular leitura do QR code';
+    if(!devices.find(d=>d.id==='cli30')){
+      devices.push({
+        id:'cli30', name:'Climatizador CLI-30', loc:'Escritório · 30.000 m³/h', sector:'Escritório',
+        on:false, temp:29.5, hum:44, speed:1, pump:false, swing:false, water:100, timer:0,
+        kw:[0.25,0.38,0.5,0.7], energy:0, hoursToday:0, hoursUse:0, maintLimit:200, aiMode:false,
+        hist:[{d:'Seg',h:0},{d:'Ter',h:0},{d:'Qua',h:0},{d:'Qui',h:0},{d:'Sex',h:0},{d:'Sáb',h:0},{d:'Hoje',h:0}],
+        sched:{enabled:false, days:[1,1,1,1,1,0,0], on:'08:00', off:'18:00'}
+      });
+    }
+    closeModals();
+    showToast('✅ Climatizador CLI-30 cadastrado! Garantia de 12 meses ativada em 03/07/2026.');
+    renderHome(); saveState();
+  }, 1600);
+}
+
+/* =============== toast (notificações) =============== */
+let toastTimer = null;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.innerHTML = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 4200);
+}
+
+/* =============== relatório mensal (PDF via imprimir) =============== */
+function printReport(){
+  const kwhTotal = devices.reduce((a,d)=>a+d.energy,0)*22; // projeção mensal simples
+  const custo = kwhTotal*TARIFA;
+  const economia = kwhTotal*(FATOR_AC-1)*TARIFA;
+  document.getElementById('report').innerHTML = `
+    <h1>RefriForte Clima · Relatório Mensal</h1>
+    <div class="sub">Junho/2026 · Gerado em 03/07/2026 · Cliente: Indústria Exemplo Ltda.</div>
+    <p><span class="big">${kwhTotal.toFixed(0)} kWh</span> consumidos no mês · custo de <span class="big">R$ ${custo.toFixed(2).replace('.',',')}</span></p>
+    <p style="margin-top:6px">Economia estimada vs. ar-condicionado equivalente: <span class="big">R$ ${economia.toFixed(2).replace('.',',')}</span></p>
+    <table>
+      <tr><th>Equipamento</th><th>Setor</th><th>Horas/mês (proj.)</th><th>kWh/mês (proj.)</th><th>Custo</th><th>Manutenção</th></tr>
+      ${devices.map(d=>{
+        const h = d.hist.reduce((a,x)=>a+x.h,0)/7*30;
+        const k = d.energy*22;
+        return `<tr><td>${d.name}</td><td>${d.sector}</td><td>${h.toFixed(0)} h</td><td>${k.toFixed(0)} kWh</td><td>R$ ${(k*TARIFA).toFixed(2).replace('.',',')}</td><td>${Math.max(0,Math.round(d.maintLimit-d.hoursUse))} h p/ limpeza</td></tr>`;
+      }).join('')}
+    </table>
+    <div class="foot">Relatório gerado pelo app RefriForte Clima · refriforte.com.br · Valores estimados com tarifa de R$ ${TARIFA.toFixed(2).replace('.',',')}/kWh. Projeção mensal baseada no padrão da última semana.</div>`;
+  window.print();
+}
+
+/* =============== persistência =============== */
+async function saveState(){
+  try{
+    await window.storage.set('refriforte-clima-v1', JSON.stringify({devices, profile}));
+  }catch(e){ /* sem storage disponível: segue em memória */ }
+}
+async function loadState(){
+  try{
+    const r = await window.storage.get('refriforte-clima-v1');
+    if(r && r.value){
+      const s = JSON.parse(r.value);
+      if(Array.isArray(s.devices) && s.devices.length){
+        devices.length = 0; s.devices.forEach(d=>devices.push(d));
+      }
+      if(s.profile){ profile = s.profile;
+        document.getElementById('profile-btn').textContent =
+          profile==='gestor' ? '👤 Perfil: Gestor ▾' : '👷 Perfil: Operador (Galpão) ▾';
+      }
+      renderHome();
+    }
+  }catch(e){ /* primeira execução ou storage indisponível */ }
 }
 
 /* =============== navegação =============== */
@@ -405,6 +973,11 @@ function openDevice(id){
   current = devices.find(d=>d.id===id);
   document.getElementById('home').classList.add('hidden');
   document.getElementById('detail').classList.add('active');
+  const ins = document.getElementById('insights');
+  ins.classList.remove('show'); ins.innerHTML = '';
+  const ans = document.getElementById('ai-answer');
+  ans.classList.remove('show'); ans.textContent = '';
+  sugSched = null;
   renderDetail();
 }
 function goHome(){
@@ -464,6 +1037,102 @@ function renderDetail(){
   } else {
     document.getElementById('alert-water').classList.remove('show');
   }
+
+  // programação semanal
+  document.getElementById('sw-sched').classList.toggle('on', d.sched.enabled);
+  document.getElementById('sched-body').classList.toggle('off', !d.sched.enabled);
+  document.querySelectorAll('#days-seg button').forEach((b,i)=>{
+    b.classList.toggle('sel', !!d.sched.days[i]);
+  });
+  document.getElementById('sched-on').value = d.sched.on;
+  document.getElementById('sched-off').value = d.sched.off;
+
+  // energia
+  const custo = d.energy * TARIFA;
+  const economia = d.energy * (FATOR_AC - 1) * TARIFA;
+  document.getElementById('en-kwh').textContent = d.energy.toFixed(1);
+  document.getElementById('en-cost').textContent = 'R$ ' + custo.toFixed(2).replace('.',',');
+  document.getElementById('en-hours').textContent = d.hoursToday.toFixed(1) + ' h';
+  document.getElementById('en-save').innerHTML =
+    '🌿 Economia vs. ar-condicionado equivalente: <b>R$ ' + economia.toFixed(2).replace('.',',') + '</b> hoje';
+
+  // manutenção
+  const usado = Math.min(100, d.hoursUse / d.maintLimit * 100);
+  const restam = Math.max(0, d.maintLimit - d.hoursUse);
+  const mf = document.getElementById('maint-fill');
+  mf.style.width = usado + '%';
+  mf.classList.toggle('warn', usado >= 80);
+  document.getElementById('maint-left').textContent =
+    restam > 0 ? 'em ' + Math.round(restam) + ' h de uso' : 'limpeza pendente!';
+
+  // IA
+  document.getElementById('sw-ai').classList.toggle('on', d.aiMode);
+  const maxH = Math.max(...d.hist.map(x=>x.h), 1);
+  document.getElementById('hist').innerHTML = d.hist.map((x,i)=>`
+    <div class="col ${i===6?'today':''}">
+      <div class="bar" style="height:${Math.max(5, x.h/maxH*100)}%" title="${x.h.toFixed(1)} h"></div>
+      <span>${x.d}</span>
+    </div>`).join('');
+  const totH = d.hist.reduce((a,x)=>a+x.h,0);
+  document.getElementById('hist-total').textContent = totH.toFixed(1) + ' h';
+  document.getElementById('hist-kwh').textContent =
+    (totH * d.kw[2]).toFixed(1) + ' kWh (R$ ' + (totH * d.kw[2] * TARIFA).toFixed(2).replace('.',',') + ')';
+
+  // previsão de fim da água
+  const pred = document.getElementById('water-pred');
+  if(hasPump){
+    if(d.on && d.pump && d.water > 0){
+      const horas = d.water / (3 * d.speed); // consumo ~3% por hora por nível de velocidade
+      const hh = Math.floor(horas), mm = Math.round((horas-hh)*60);
+      pred.innerHTML = `✦ Previsão IA: no ritmo atual, o reservatório esgota em <b>~${hh}h${mm>0?mm+'min':''}</b>${horas<3?' — reabasteça antes do fim do turno':''}`;
+      pred.style.color = horas < 3 ? 'var(--red)' : 'var(--blue)';
+    } else if(d.water <= 0){
+      pred.innerHTML = '🚫 Reservatório vazio — umidificação suspensa automaticamente.';
+      pred.style.color = 'var(--red)';
+    } else {
+      pred.innerHTML = 'Bomba d\'água desligada — sem consumo de água no momento.';
+      pred.style.color = 'var(--gray)';
+    }
+  }
+
+  // gráfico 24h
+  render24hChart(d);
+}
+
+function gen24h(d){
+  if(d.series24) return d.series24;
+  const ext=[], amb=[], hum=[];
+  for(let h=0; h<24; h++){
+    const e = 26.5 + 5.5*Math.sin((h-9)/24*2*Math.PI) + (Math.random()-0.5)*0.6; // externa: pico ~15h
+    const trabalhando = h>=7 && h<18;
+    const a = trabalhando ? e - (d.pump===null?2.5:6) + (Math.random()-0.5)*0.5 : e - 0.3;
+    const u = trabalhando && d.pump!==null ? 62+(Math.random()-0.5)*6 : 44+(Math.random()-0.5)*5;
+    ext.push(e); amb.push(a); hum.push(u);
+  }
+  d.series24 = {ext, amb, hum};
+  return d.series24;
+}
+
+function render24hChart(d){
+  const s = gen24h(d);
+  const W=360, H=130, P=6;
+  const tMin=18, tMax=34;
+  const x = i => P + i*(W-2*P)/23;
+  const yT = v => H-P - (v-tMin)/(tMax-tMin)*(H-2*P);
+  const yH = v => H-P - (v)/100*(H-2*P);
+  const line = (arr,y) => arr.map((v,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  document.getElementById('chart24').innerHTML = `
+  <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <line x1="${P}" y1="${yT(30)}" x2="${W-P}" y2="${yT(30)}" stroke="#DCE4EE" stroke-dasharray="3 4"/>
+    <line x1="${P}" y1="${yT(25)}" x2="${W-P}" y2="${yT(25)}" stroke="#DCE4EE" stroke-dasharray="3 4"/>
+    <line x1="${P}" y1="${yT(20)}" x2="${W-P}" y2="${yT(20)}" stroke="#DCE4EE" stroke-dasharray="3 4"/>
+    <text x="${P+2}" y="${yT(30)-3}" font-size="8" fill="#9AA8B8">30°</text>
+    <text x="${P+2}" y="${yT(25)-3}" font-size="8" fill="#9AA8B8">25°</text>
+    <text x="${P+2}" y="${yT(20)-3}" font-size="8" fill="#9AA8B8">20°</text>
+    <path d="${line(s.hum,yH)}" fill="none" stroke="#5FB3D0" stroke-width="1.4" opacity=".6"/>
+    <path d="${line(s.ext,yT)}" fill="none" stroke="#E63329" stroke-width="1.8"/>
+    <path d="${line(s.amb,yT)}" fill="none" stroke="#0E4D92" stroke-width="2.2"/>
+  </svg>`;
 }
 
 /* =============== ações =============== */
@@ -475,11 +1144,155 @@ function togglePower(){
 function setSpeed(s){ if(current.on){ current.speed = s; renderDetail(); } }
 function setTimer(h){ if(current.on){ current.timer = h; renderDetail(); } }
 function toggleOpt(k){ if(current.on){ current[k] = !current[k]; renderDetail(); } }
+function toggleSched(){ current.sched.enabled = !current.sched.enabled; renderDetail(); }
+function toggleDay(i){ current.sched.days[i] = current.sched.days[i] ? 0 : 1; renderDetail(); }
+function setSchedTime(k,v){ if(v) current.sched[k] = v; }
+function openWhats(){
+  const msg = encodeURIComponent(
+    `Olá, RefriForte! Gostaria de solicitar assistência técnica para meu equipamento:\n\n` +
+    `• Equipamento: ${current.name}\n` +
+    `• Local: ${current.loc}\n` +
+    `• Horas de uso: ${Math.round(current.hoursUse)} h\n\n` +
+    `Enviado pelo app RefriForte Clima.`
+  );
+  window.open(`https://wa.me/${WHATS_REFRIFORTE}?text=${msg}`,'_blank');
+}
+
+/* =============== RefriForte IA =============== */
+function toggleAI(){
+  current.aiMode = !current.aiMode;
+  renderDetail();
+}
+
+function deviceContext(d){
+  return `Equipamento: ${d.name} (${d.loc})
+Estado: ${d.on?'ligado':'desligado'}, velocidade ${d.speed}/4, bomba d'água ${d.pump===null?'não possui':(d.pump?'ligada':'desligada')}
+Temperatura ambiente: ${d.temp.toFixed(1)}°C (externa ${EXT}°C), umidade ${d.hum.toFixed(0)}%
+Nível de água: ${d.water===null?'n/a':d.water.toFixed(0)+'%'}
+Consumo hoje: ${d.energy.toFixed(1)} kWh (${d.hoursToday.toFixed(1)} h), tarifa R$${TARIFA}/kWh
+Horas até manutenção: ${Math.max(0, d.maintLimit-d.hoursUse).toFixed(0)} h
+Programação atual: ${d.sched.enabled ? `ativa, ${d.sched.on}–${d.sched.off}` : 'desativada'}
+Histórico de uso (7 dias, horas/dia): ${d.hist.map(x=>`${x.d}=${x.h.toFixed(1)}h`).join(', ')}`;
+}
+
+async function callClaude(prompt){
+  const r = await fetch("https://api.anthropic.com/v1/messages", {
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      model:"claude-sonnet-4-6",
+      max_tokens:1000,
+      messages:[{role:"user",content:prompt}]
+    })
+  });
+  const data = await r.json();
+  return data.content.filter(i=>i.type==="text").map(i=>i.text).join("\n");
+}
+
+async function aiAnalyze(){
+  const d = current;
+  const btn = document.getElementById('ai-btn');
+  const box = document.getElementById('insights');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span> Analisando seu padrão de uso...';
+  box.classList.remove('show'); box.innerHTML = '';
+
+  const prompt = `Você é a "RefriForte IA", assistente inteligente embarcada no app de controle de climatizadores evaporativos industriais da RefriForte. Analise os dados abaixo e gere recomendações personalizadas para este cliente.
+
+${deviceContext(d)}
+
+Responda SOMENTE com JSON válido, sem markdown nem texto extra, no formato:
+{"insights":[{"texto":"...", "tipo":"info"},{"texto":"...", "tipo":"acao"}], "agenda_sugerida":{"on":"HH:MM","off":"HH:MM","justificativa":"..."}}
+
+Regras: 2 a 4 insights curtos (máx. 2 frases cada) em português do Brasil, baseados no padrão semanal de uso, consumo, água e manutenção. Use tipo "acao" para recomendações práticas e "info" para observações. A agenda_sugerida deve otimizar conforto e economia com base no histórico.`;
+
+  try{
+    let txt = await callClaude(prompt);
+    txt = txt.replace(/```json|```/g,'').trim();
+    const res = JSON.parse(txt);
+    renderInsights(res, d);
+  }catch(e){
+    // fallback offline: análise local do histórico
+    const media = d.hist.slice(0,6).reduce((a,x)=>a+x.h,0)/6;
+    const pico = d.hist.reduce((a,x)=>x.h>a.h?x:a);
+    renderInsights({
+      insights:[
+        {texto:`Seu uso médio é de ${media.toFixed(1)} h/dia, com pico na ${pico.d} (${pico.h.toFixed(1)} h). O padrão indica operação concentrada no horário comercial.`, tipo:'info'},
+        {texto:`Reduzindo 1 nível de velocidade nas primeiras horas da manhã (ambiente ainda fresco), a economia estimada é de até R$ ${(media*7*0.2*TARIFA).toFixed(2).replace('.',',')} por semana.`, tipo:'acao'},
+        d.water!==null && d.water<40 ? {texto:`O reservatório está em ${d.water.toFixed(0)}%. Pelo seu ritmo de uso, reabasteça antes do próximo turno para não interromper a umidificação.`, tipo:'acao'} : {texto:`Faltam ${Math.max(0,d.maintLimit-d.hoursUse).toFixed(0)} h de uso para a limpeza do painel evaporativo. Manter o painel limpo preserva até 15% da eficiência de resfriamento.`, tipo:'info'}
+      ],
+      agenda_sugerida:{on:'07:30', off:'17:30', justificativa:'Cobre seu horário real de uso com margem mínima, evitando funcionamento ocioso.'}
+    }, d);
+  }
+  btn.disabled = false;
+  btn.innerHTML = '✦ Gerar recomendações da IA';
+}
+
+let sugSched = null;
+function renderInsights(res, d){
+  const box = document.getElementById('insights');
+  sugSched = res.agenda_sugerida || null;
+  box.innerHTML = (res.insights||[]).map(i=>
+    `<div class="insight ${i.tipo==='acao'?'action':''}">${i.tipo==='acao'?'⚡ ':'💡 '}${i.texto}</div>`
+  ).join('');
+  if(sugSched && sugSched.on){
+    box.innerHTML += `<div class="insight action">📅 Agenda sugerida: <b>${sugSched.on} – ${sugSched.off}</b>. ${sugSched.justificativa||''}</div>
+    <button class="apply-sched" onclick="applySuggested()">Aplicar agenda sugerida</button>`;
+  }
+  box.classList.add('show');
+}
+function applySuggested(){
+  if(!sugSched) return;
+  current.sched.enabled = true;
+  current.sched.on = sugSched.on;
+  current.sched.off = sugSched.off;
+  renderDetail();
+}
+
+async function aiAsk(){
+  const q = document.getElementById('ai-q').value.trim();
+  if(!q) return;
+  const ans = document.getElementById('ai-answer');
+  ans.classList.add('show');
+  ans.textContent = 'Pensando...';
+  document.getElementById('ai-q').value = '';
+  const prompt = `Você é a "RefriForte IA", assistente do app de controle de climatizadores evaporativos da RefriForte. Dados atuais do equipamento do cliente:
+
+${deviceContext(current)}
+
+Pergunta do cliente: "${q}"
+
+Responda em português do Brasil, de forma curta (máx. 4 frases), prática e personalizada com base nos dados acima. Sem markdown.`;
+  try{
+    ans.textContent = await callClaude(prompt);
+  }catch(e){
+    ans.textContent = 'Não consegui conectar à IA agora. Verifique sua conexão e tente novamente — enquanto isso, as recomendações acima usam a análise local do seu histórico.';
+  }
+}
 
 /* =============== simulação =============== */
 setInterval(()=>{
+  const now = new Date();
+  const hhmm = now.toTimeString().slice(0,5);
+  const dow = (now.getDay() + 6) % 7; // 0 = segunda ... 6 = domingo
+
   devices.forEach(d=>{
+    // programação semanal: liga/desliga no horário agendado
+    if(d.sched.enabled && d.sched.days[dow]){
+      if(hhmm === d.sched.on && !d.on){ d.on = true; }
+      if(hhmm === d.sched.off && d.on){ d.on = false; d.timer = 0; }
+    }
     if(d.on){
+      // Modo Inteligente: ajusta velocidade e bomba conforme o ambiente
+      if(d.aiMode){
+        const delta = d.temp - 25; // alvo de conforto: 25°C
+        const alvo = delta > 4 ? 4 : delta > 2.5 ? 3 : delta > 1 ? 2 : 1;
+        if(d.speed !== alvo) d.speed = alvo;
+        if(d.pump !== null){
+          if(delta > 1 && d.water > 5 && !d.pump) d.pump = true;
+          if(delta <= 0.3 && d.pump) d.pump = false;
+        }
+      }
       const cooling = d.pump ? 6 + d.speed : 2 + d.speed*0.5;
       const target = EXT - cooling;
       d.temp += (target - d.temp)*0.08 + (Math.random()-0.5)*0.15;
@@ -489,6 +1302,11 @@ setInterval(()=>{
         d.water = Math.max(0, d.water - 0.15*d.speed);
         if(d.water <= 0){ d.pump = false; }
       }
+      // consumo de energia e horas de uso (tick = 2s)
+      const dt = 2/3600;
+      d.energy += d.kw[d.speed-1] * dt;
+      d.hoursToday += dt;
+      d.hoursUse += dt;
     } else {
       d.temp += (EXT - d.temp)*0.03 + (Math.random()-0.5)*0.1;
       d.hum += (42 - d.hum)*0.03 + (Math.random()-0.5)*0.4;
